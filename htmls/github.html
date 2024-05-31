@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style2.css">
+		<link rel="icon" type="image/png" href="/assets/icono.png">
+    </head>
+    <body onclick="PlayAudio">
+    <audio id="click">
+            <source src="assets/click.ogg" type="audio/ogg">
+    </audio>
+    <audio id="MusicMenu" loop>
+			<source src="assets/menu2.ogg" type="audio/ogg">
+    </audio>
+        <!--<div class="panorama"></div>-->
+	<div class="scroll">
+        <div class="guibox center supercenter" style="width: 45%;">
+            <p class="lem-header">Sistema de VoiceChat</p>
+            <p style="font-size:0.5em">El sistema de voicechat puede ser complejo para algunos jugadores por esta misma razon tendran este tutorial donde les enseñaremos a usar el voicechat.</p>
+	    <p style="font-size:0.5em">para empezar tienes que estar dentro del servidor de minecraft dependiendo seas de bedrock o java va a ser distinto el proceso </p>
+            <span id="lem-subheader">Para Bedrock</span>
+                <p style="font-size: 0.5em">En cuanto a bedrock hay que acceder por la pagina <a href="https://session.openaudiomc.net/">session.openaudiomc.net</a> una vez entres a la pagina le das a continue to bedrock login luego te pedira permisos de microfono le das los permisos<br>
+                    despues te dejara escoger cual microfono quieres usar y una vez elegido le das al boton continuar una vez te cargue te mostrara un codigo ese codigo lo pondras de esta forma "/audio (codigo)" y ya deberias poder usar el voicechat y escuchar a otros usuarios<br>
+				</p>
+            <span id="lem-subheader">Para Java</span>
+                <p style="font-size: 0.5em">Para java primero tendras que escribir el comando "/audio" sin añadir nada simplemente escribes el comando luego te mostrara un mensaje el cual al darle click encima te mandara a una pagina dentro de la pagina te dejaran escoger entre abrir una sesión de audio y una sesión de voicechat <br>
+                    la sesión de audio te permitira unicamente escuchar musica en especifico la del spawn pero la sesión de voicechat te permitira escuchar la musica del spawn y hablar y escuchar a las personas de tu alrededor una vez eligas la session te pedira acceso al microfono una vez le des permisos ya podras hablar y escuchar a la gente que tenga voicechat activado<br>
+				</p>
+            <a href="javascript:delay('../index.html')" onclick="clickSound()">Volver</a>
+        </div>
+	</div>
+    </body>
+    <script src="script2.js"></script>
+    <script>
+		function PlayAudio() {
+			document.getElementById("MusicMenu").play();
+		}
+		function delay (URL) {
+    		setTimeout( function() { window.location = URL }, 500 );
+		}
+        function clickSound() {
+	        document.getElementById("click").play();
+        }
+	</script>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style2.css">
+		<link rel="icon" type="image/png" href="/assets/icono.png">
+    </head>
+    <body onclick="PlayAudio">
+        <audio id="click">
+            <source src="assets/click.ogg" type="audio/ogg">
+        </audio>
+        <!--<div class="panorama"></div>-->
+	<div class="scroll">
+        <div class="guibox center supercenter" style="width: 45%;">
+            <p class="lem-header">Modo batalla</p>
+            <p style="font-size:0.5em">Esta modalidad es una replica del modo de batalla de la edicion de consolas pero en Minecraft Java 1.20.1 (y no, no se puede entrar con Bedrock)</p>
+	    <p style="font-size:0.5em">Para jugar el host debe configurar la partida (Si tu nombre está en color blanco, eres el único conectado o no estás en un lobby, probablemente seas el "host" en caso de no estar en un lobby y eres el host debes configurar la partida si o si para jugar)</p>
+            <span id="lem-subheader">Configurar la partida</span>
+                <p style="font-size: 0.5em">Para configurar la partida tendras que abrir el chat y elegir las opciones que quieras hay varias opciones de configuracion las mas importantes son "Number Of Rounds" esta opcion te permite elegir las rondas<br>
+                    "Number of Lives" te permitira elegir cuantas veces se podra reaparecer en las partidas "Item Set Options" te permitira elegir lo que tendran los cofres en la partida "Map Options" esta opcion te dejara elegir que mapas estan habilitados y si seran mapas pequeños y grandes (Auto), pequeños (small), grandes (large). <br>
+				</p>
+            <span id="lem-subheader">Votacion de mapas</span>
+                <p style="font-size: 0.5em">Para votar un mapa abre el libro clickea en "[Map Voting]" luego click en "[Base Game]" y selecciona el DLC del mapa que quieras votar los mapas default estan en [Map Pack 0] <br>
+                    y en caso de que quieras quitar tu voto presiona la tecla ESC y vuelve a abrir el libro click en [Map Voting] luego en [Remove Vote] y ya habras quitado tu voto<br>
+				</p>
+            <a href="javascript:delay('../index.html')" onclick="clickSound()">Volver</a>
+        </div>
+	</div>
+    <audio id="MusicMenu" loop>
+        <source src="assets/menu2.ogg" type="audio/ogg">
+    </audio>
+    </body>
+    <script src="script2.js"></script>
+    <script> 
+        function PlayAudio() {
+            document.getElementById("MusicMenu").play();
+        }
+        function delay (URL) {
+            setTimeout( function() { window.location = URL }, 500 );
+        }
+        function clickSound() {
+	        document.getElementById("click").play();
+        }
+    </script>
+</html>

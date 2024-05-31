@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style2.css">
+		<link rel="icon" type="image/png" href="/assets/icono.png">
+    </head>
+    <body onclick="PlayAudio">
+        <audio id="click">
+            <source src="assets/click.ogg" type="audio/ogg">
+    </audio>
+    <audio id="MusicMenu" loop>
+			<source src="assets/menu2.ogg" type="audio/ogg">
+    </audio>
+        <!--<div class="panorama"></div>-->
+	<div class="scroll">
+        <div class="guibox center supercenter" style="margin-top: 1em; width: 60%; font-size: 0.75em;">
+            <p class="lem-header">Servidores</p>
+            Aqui se mostraran las IPs y puertos de los servidores<br>
+	    En caso de el ip no tener al lado un puerto quiere decir que no es posible acceder mediante bedrock<br>
+	    <br>
+	    <b>Survival:</span></b> play.626s.online / 626 <span style="color: ##008000">(Abierto)</span><br>
+            <b>Batalla Legacy:</b> legacy.626s.online <span style="color: #ff5555">(Cerrado)</span><br>
+            <b>Anarquico:</b> anarchy.626s.online <span style="color: #ff5555">(Cerrado)</span><br>
+            <a href="javascript:delay('../index.html')" onclick="clickSound()">Volver</a>
+        </div>
+	</div>
+    </body>
+    <script src="script2.js"></script>
+    <script>
+		function PlayAudio() {
+			document.getElementById("MusicMenu").play();
+		}
+		function delay (URL) {
+    		setTimeout( function() { window.location = URL }, 500 );
+		}
+        function clickSound() {
+	        document.getElementById("click").play();
+        }
+	</script>
+</html>

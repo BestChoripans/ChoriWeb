@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style2.css">
+		<link rel="icon" type="image/png" href="/assets/icono.png">
+    </head>
+    <body onclick="PlayAudio">
+		<audio id="click">
+            <source src="assets/click.ogg" type="audio/ogg">
+	</audio>
+	<audio id="MusicMenu" loop>
+			<source src="assets/menu2.ogg" type="audio/ogg">
+	</audio>
+        <!--<div class="panorama"></div>-->
+
+	<div class="scroll">
+        <div class="guibox center supercenter" style="width: 45%; margin-top: 1em;">
+				<iframe src="https://music.youtube.com" width="400" height="800">
+				<a href="javascript:delay('../index.html')" onclick="clickSound()">Volver</a><br>
+        </div>
+	</div>
+    </body>
+    <script src="script2.js"></script>
+	<script>
+		function PlayAudio() {
+			document.getElementById("MusicMenu").play();
+		}
+		function delay (URL) {
+    		setTimeout( function() { window.location = URL }, 500 );
+		}
+        function clickSound() {
+	        document.getElementById("click").play();
+        }
+	</script>
+</html>
